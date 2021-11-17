@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StockPredictor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/light_grey</item>
+        <item name="colorPrimaryVariant">@color/light_grey</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:navigationBarColor">#00548F5A</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="textFillColor">#f0efeb</item>
+        <item name="android:colorBackground">#293241</item>
+
+    </style>
+    <style name="Theme" parent="@style/Widget.AppCompat.TextView">
+        <item name="android:textColor">#f0efeb</item>
+    </style>
+
+
+</resources>

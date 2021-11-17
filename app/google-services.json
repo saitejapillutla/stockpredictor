@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "317390522768",
+    "firebase_url": "https://stockpredictor01-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "stockpredictor01",
+    "storage_bucket": "stockpredictor01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317390522768:android:60b852f6c0fede0ac24b15",
+        "android_client_info": {
+          "package_name": "com.saitejapillutla.stockpredictor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317390522768-g7rajsnptkmpt2lgrlhujqus6lnee0fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu88cKLYgXBBesPYPv21ZjJMOGXaO4uFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317390522768-g7rajsnptkmpt2lgrlhujqus6lnee0fp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

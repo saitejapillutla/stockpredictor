@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/drawable/gradient_bg.xml" value="0.24114583333333334" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/drawable/rounded_green.xml" value="0.22314814814814815" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/drawable/rounded_grey_light.xml" value="0.23333333333333334" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/drawable/rounded_red.xml" value="0.21388888888888888" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/layout/activity_home.xml" value="0.14" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/layout/activity_main.xml" value="0.28751974723538704" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/layout/activity_splash_screen.xml" value="0.18981481481481483" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/layout/activity_stock_details.xml" value="0.17391304347826086" />
+        <entry key="..\:/datra/SAITEJA/StockPredictor/app/src/main/res/layout/gainer_looser_item.xml" value="0.575" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
