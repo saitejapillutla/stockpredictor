@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ml.modeldownloader.CustomModelDownloadConditions
+import com.google.firebase.ml.modeldownloader.DownloadType
+import com.google.firebase.ml.modeldownloader.FirebaseModelDownloader
 import com.pacific.adapter.RecyclerAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlin.coroutines.CoroutineContext
@@ -55,9 +58,17 @@ class Home : AppCompatActivity(){
                 textView4.visibility = View.VISIBLE
                 looser_recycler.visibility = View.VISIBLE
             }
-
           }
+        val conditions = CustomModelDownloadConditions.Builder()
+            .build()
+        FirebaseModelDownloader.getInstance()
+            .getModel("stockPredictionModel_v1", DownloadType.LOCAL_MODEL, conditions)
+            .addOnCompleteListener {
+                Log.d(TAG, "it completed" )
 
+                // Download complete. Depending on your app, you could enable the ML
+                // feature, or switch from the local model to the remote model, etc.
+            }
 
        // CoroutineScope(newSingleThreadContext("retriveGainers")).launch(Dispatchers.Main){}
         //job1.start()
@@ -140,6 +151,8 @@ class Home : AppCompatActivity(){
     }
 
     private suspend fun fetchlosers(): HashMap<String, HashMap<String, String>> {
+
+
         var losers = hashMapOf("0" to hashMapOf<String,String>())
         withContext(Dispatchers.IO){
             val request = Request.Builder()
@@ -204,19 +217,19 @@ class Home : AppCompatActivity(){
     private suspend fun updateMarketInfoUI(market_info: Deferred<HashMap<String, String>>) {
         if(market_info.await().get("marketStatus") != ""){
             if (market_info.await().get("marketStatus")=="Close"){
-                marketStatus.setText("CLOSED")
-                marketStatus.setTextColor( getResources().getColor(R.color.light_red))
+                marketStatus.text = "CLOSED"
+                marketStatus.setTextColor( resources.getColor(R.color.light_red))
             }else{
-                marketStatus.setText("OPEN")
-                marketStatus.setTextColor( getResources().getColor(R.color.light_green))
+                marketStatus.text = "OPEN"
+                marketStatus.setTextColor( resources.getColor(R.color.light_green))
             }
-            last.setText(market_info.await().get("last"))
-            variation.setText("${market_info.await().get("variation")
-            } ( ${market_info.await().get("percentChange")}% )")
+            last.text = market_info.await().get("last")
+            variation.text = "${market_info.await().get("variation")
+            } ( ${market_info.await().get("percentChange")}% )"
             if (market_info.await().get("variation")?.toDouble()!!<0) {
-                variation.setTextColor( getResources().getColor(R.color.light_red))
+                variation.setTextColor( resources.getColor(R.color.light_red))
             }else{
-                variation.setTextColor( getResources().getColor(R.color.light_green))
+                variation.setTextColor( resources.getColor(R.color.light_green))
             }
         }
     }

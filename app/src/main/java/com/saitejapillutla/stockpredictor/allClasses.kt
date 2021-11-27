@@ -7,8 +7,8 @@ import com.pacific.adapter.AdapterViewHolder
 import com.pacific.adapter.SimpleRecyclerItem
 import kotlinx.android.synthetic.main.gainer_looser_item.view.*
 
-class allClasses {
-}
+class allClasses
+
 @IgnoreExtraProperties
 data class User(val username: String? = null, val email: String? = null,
                 val lastSeen :String? = null,
@@ -41,9 +41,6 @@ class Gainers(
     }
     override fun getLayout(): Int {
         return R.layout.gainer_looser_item
-    }
-    override fun unbind(holder: AdapterViewHolder) {
-        super.unbind(holder)
     }
 
     override fun onViewAttachedToWindow(holder: AdapterViewHolder) {
@@ -89,3 +86,47 @@ class Gainers(
 
 
 }
+
+enum class AAChartZoomType(val value: String) {
+    None ("none"),
+    X    ("x"),
+    Y    ("y"),
+    XY   ("xy"),
+}
+enum class AAChartAnimationType(val value :String){
+    EaseInQuad     ("easeInQuad"),
+    EaseOutQuad    ("easeOutQuad"),
+    EaseInOutQuad  ("easeInOutQuad"),
+    EaseInCubic    ("easeInCubic"),
+    EaseOutCubic   ("easeOutCubic"),
+    EaseInOutCubic ("easeInOutCubic"),
+    EaseInQuart    ("easeInQuart"),
+    EaseOutQuart   ("easeOutQuart"),
+    EaseInOutQuart ("easeInOutQuart"),
+    EaseInQuint    ("easeInQuint"),
+    EaseOutQuint   ("easeOutQuint"),
+    EaseInOutQuint ("easeInOutQuint"),
+    EaseInSine     ("easeInSine"),
+    EaseOutSine    ("easeOutSine"),
+    EaseInOutSine  ("easeInOutSine"),
+    EaseInExpo     ("easeInExpo"),
+    EaseOutExpo    ("easeOutExpo"),
+    EaseInOutExpo  ("easeInOutExpo"),
+    EaseInCirc     ("easeInCirc"),
+    EaseOutCirc    ("easeOutCirc"),
+    EaseInOutCirc  ("easeInOutCirc"),
+    EaseOutBounce  ("easeOutBounce"),
+    EaseInBack     ("easeInBack"),
+    EaseOutBack    ("easeOutBack"),
+    EaseInOutBack  ("easeInOutBack"),
+    Elastic        ("elastic"),
+    SwingFromTo    ("swingFromTo"),
+    SwingFrom      ("swingFrom"),
+    SwingTo        ("swingTo"),
+    Bounce         ("bounce"),
+    BouncePast     ("bouncePast"),
+    EaseFromTo     ("easeFromTo"),
+    EaseFrom       ("easeFrom"),
+    EaseTo         ("easeTo"),
+}
+
