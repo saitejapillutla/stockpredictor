@@ -1,6 +1,7 @@
-# stockpredictorApplication The project mainly focuses on an Application that uses Recurrent Neural Networks (RNN) and especially Long-Short Term Memory Models (LSTM) to determine future stock market values.
+# stockpredictorApplication
+The project mainly focuses on an Application that uses Recurrent Neural Networks (RNN) and especially Long-Short Term Memory Models (LSTM) to determine future stock market values.
 
-the main aim is to see how accurately a machine learning algorithm is able to predict and with such a precision that user can receive best possible prediction through
+Main aim is to see how accurately a machine learning algorithm is able to predict and with such a precision that user can receive best possible prediction through
 the application from our model. an android app using kotlin programming language which lets us take full advantage of async using coroutines which lets me have utmost supremacy while scheduling jobs for each thread and maintains fluidity while the app takes data from API to display the current market status and specific day’s stock trends.
 
 ![image](https://user-images.githubusercontent.com/71364937/155899140-0ef7d3c3-7baf-437d-a151-96e1b7e2f17b.png)
